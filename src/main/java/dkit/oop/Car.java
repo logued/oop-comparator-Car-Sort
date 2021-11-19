@@ -4,14 +4,14 @@ public class Car
 {
 	private String make;
 	private String model;
-	private 	String colour;
+	private String colour;
 	private int year;
-	private int mileage;
+	private double mileage;
 	
 	public Car() {
 	}
 	
-	public Car(String make, String model, String colour, int year, int mileage) {
+	public Car(String make, String model, String colour, int year, double mileage) {
 		this.make= make;
 		this.model = model;
 		this.colour = colour;
@@ -24,7 +24,7 @@ public class Car
 	public String getModel() { return this.model; }
 	public String getColour() { return this.colour; }
 	public int getYear() { return this.year; }
-	public int getMileage() { return this.mileage; }
+	public double getMileage() { return this.mileage; }
 		
 	// override
 	public boolean equals( Object otherObject ) {
