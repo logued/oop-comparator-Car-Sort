@@ -13,7 +13,8 @@
 // the order of sorting (i.e. by make)
 // The sort() method will call the compareTo() method each time it
 // wants to compare two cars.  The two cars being compared are
-// passed into the compareTo() method.
+// passed into the compareTo() method, and the result of the comparison
+// is returned as [ negative, zero, or positive value ]
 
 package dkit.oop;
 
@@ -29,5 +30,6 @@ public class CarMakeComparator implements Comparator<Car>
 		// The Make of a car is of type String and the String class implements
 		// a compareTo() method that returns -1, 0, or +1 as appropriate.
 		// So, to compare string fields we simply use the compareTo() method
+		// of the String class.
 	}
 }

@@ -38,7 +38,7 @@ public class Car
 		return make.equals(other.make) &&
 				model.equals(other.model) &&
 				 colour.equals(other.colour) &&
-				  year == other.year;			
+				  year == other.year;			// note that colour mileage is NOT included - why?
 	}
 		
 	public String toString() {

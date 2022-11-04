@@ -13,7 +13,8 @@
 // the order of sorting (i.e. by mileage)
 // The sort() method will call the compareTo() method each time it
 // wants to compare two cars.  The two cars being compared are
-// passed into the compareTo() method.
+// passed into the compareTo() method, and the result of the comparison
+// is returned as [ negative, zero, or positive value ]
 
 package dkit.oop;
 

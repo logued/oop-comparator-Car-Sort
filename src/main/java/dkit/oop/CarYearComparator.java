@@ -13,7 +13,8 @@
 // the order of sorting (i.e. by year)
 // The sort() method will call the compareTo() method each time it
 // wants to compare two cars.  The two cars being compared are
-// passed into the compareTo() method.
+// passed into the compareTo() method, and the result of the comparison
+// is returned as [ negative, zero, or positive value ]
 
 package dkit.oop;
 
@@ -30,6 +31,9 @@ public class CarYearComparator implements Comparator<Car>
 		} else {
 			return 1;
 		}
+
+		// Note that we must use getYear() above, as the year field
+		// is private to the Car class.
 
 //		As an alternative to the above, we could subtract one from
 //		the other and return the difference.
