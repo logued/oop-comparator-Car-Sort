@@ -1,20 +1,20 @@
-// Comparator - compares int-type field "year"		Nov 2021
+// Comparator - compares int-type field "year"		Oct 2023
 //
 // This class defines a Comparator  - that is a class that implements the
 // Comparator interface.  Every class that implements the Comparator interface
 // must implement the compare() method.
 //
 // In this case we want to compare Car objects based on their "year".
-// So, in the compare() method, we compare the year fields of the
-// two Car objects.
+// So, in the compare() method, we write code to compare the year fields
+// of the two Car objects.
 //
 // To sort a list of Car objects, we can use Collections.sort() and
-// we pass in an instance of the CarYearComparator() to specify
+// pass in an instance of the CarYearComparator() to specify
 // the order of sorting (i.e. by year)
 // The sort() method will call the compareTo() method each time it
 // wants to compare two cars.  The two cars being compared are
-// passed into the compareTo() method, and the result of the comparison
-// is returned as [ negative, zero, or positive value ]
+// passed into the compareTo() method (by sort() function), and the result
+// of the comparison is returned as [ negative, zero, or positive value ]
 
 package dkit.oop;
 

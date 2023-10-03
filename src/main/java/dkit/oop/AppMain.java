@@ -65,7 +65,7 @@ public class AppMain
 
 
 		// TODO
-		// write and test a comparator to sort the carList list in order
+		// write and test a Comparator to sort the carList list in order
 		// of "year within make" - meaning that "make" is the major sort order, and
 		// "year" is the minor sort order.
 
