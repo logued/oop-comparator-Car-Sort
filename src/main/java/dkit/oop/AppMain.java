@@ -1,5 +1,7 @@
 package dkit.oop;
 
+//   https://github.com/logued/oop-comparator-Car-Sort
+
 // Demonstrates how to determine the sort order of a collection of objects
 // by implementing an appropriate Comparator.
 //
@@ -43,6 +45,9 @@ public class AppMain
 		// create a CarYearComparator object to sort by 'year'
 		CarYearComparator yearComparator = new CarYearComparator();
 		Collections.sort( carList, yearComparator );
+
+		//or Collections.sort( carList,  new CarYearComparator());
+
 		display( carList );
 
 		System.out.println("Sort by mileage:");
