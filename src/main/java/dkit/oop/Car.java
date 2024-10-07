@@ -4,7 +4,7 @@ public class Car
 {
 	private String make;
 	private String model;
-	private String colour;
+	private String colour;	// red, green etc
 	private int year;
 	private double mileage;
 	
