@@ -20,7 +20,7 @@ package dkit.oop;
 
 import java.util.Comparator;
 
-public class CarMakeComparator implements Comparator<Car>
+public class CarMakeAscendingComparator implements Comparator<Car>
 {
 	// implement the compare() method required by the Comparator interface
 	public int compare(Car car1, Car car2)

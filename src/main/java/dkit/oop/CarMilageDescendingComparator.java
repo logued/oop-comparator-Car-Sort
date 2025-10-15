@@ -1,4 +1,4 @@
-// Comparator - compares int-type field "mileage"		Nov 2025
+// Comparator - compares double-type field "mileage"		Nov 2025
 // DESCENDING Order
 
 // This class defines a Comparator  - that is a class that implements the
@@ -26,7 +26,7 @@ public class CarMilageDescendingComparator implements Comparator<Car>
     public int compare(Car car1, Car car2)
     {
         // note we reverse the order of the arguments to get a DESCENDING order
-        return Double.compare(car1.getMileage(),car2.getMileage());
+        return Double.compare(car2.getMileage(),car1.getMileage());
     }
 }
 

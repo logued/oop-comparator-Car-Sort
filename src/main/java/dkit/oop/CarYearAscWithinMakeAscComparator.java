@@ -2,7 +2,7 @@ package dkit.oop;
 
 import java.util.Comparator;
 
-public class CarYearWithinMakeComparator implements Comparator<Car> {
+public class CarYearAscWithinMakeAscComparator implements Comparator<Car> {
 
     // if makes are equal then order by age
     // else, order by make

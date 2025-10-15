@@ -20,7 +20,7 @@ package dkit.oop;
 
 import java.util.Comparator;
 
-public class CarYearComparator implements Comparator<Car>
+public class CarYearAscendingComparator implements Comparator<Car>
 {
 	public int compare(Car car1, Car car2) {
 

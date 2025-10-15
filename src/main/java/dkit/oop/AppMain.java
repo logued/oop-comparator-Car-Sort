@@ -1,9 +1,11 @@
-package dkit.oop;
+package dkit.oop;					// Oct 2025
 
 //   https://github.com/logued/oop-comparator-Car-Sort
 
 // Demonstrates how to determine the sort order of a collection of objects
-// by implementing an appropriate Comparator.
+// by providing an appropriate Comparator.
+// A Comparator is a class implements the Comparable Interface and
+// that defines a compare() method to compare to objects.
 //
 // The Comparator passed into Collections.sort(list, comparator)
 // will be used by the sort() method to compare objects and thus
@@ -42,9 +44,11 @@ public class AppMain
 		 */
 
 		System.out.println("Sort by year:");
-		// create a CarYearComparator object to sort by 'year'
-		CarYearComparator yearComparator = new CarYearComparator();
+		// create instance of CarYearComparator object to specify ordering for sort by 'year'
+		CarYearAscendingComparator yearComparator = new CarYearAscendingComparator();
 		Collections.sort( carList, yearComparator );
+
+		// or carList.sort( yearComparator );  // uses List.sort()
 
 		//or Collections.sort( carList,  new CarYearComparator());
 
@@ -52,13 +56,20 @@ public class AppMain
 
 		System.out.println("Sort by mileage:");
 		// create a CarMileageComparator object to sort by 'mileage'
-		CarMileageComparator mileageComparator = new CarMileageComparator();
+		CarMileageAscendingComparator mileageComparator = new CarMileageAscendingComparator();
 		Collections.sort( carList, mileageComparator );
 		display( carList );
 
+		System.out.println("Sort by mileage DESCENDING:");
+		// create a CarMileageDescendingComparator object to sort by 'mileage'
+		Collections.sort( carList, new CarMilageDescendingComparator() );
+		display( carList );
+
+
+
 		System.out.println("Sort by make:");
 		// create a CarMakeComparator object to sort by 'make'
-		CarMakeComparator makeComparator = new CarMakeComparator();
+		CarMakeAscendingComparator makeComparator = new CarMakeAscendingComparator();
 		Collections.sort( carList, makeComparator );
 		display( carList );
 

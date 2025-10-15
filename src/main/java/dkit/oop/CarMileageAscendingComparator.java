@@ -1,5 +1,5 @@
-// Comparator - compares int-type field "mileage"		Nov 2021
-//
+// Comparator - compares int-type field "mileage"		Nov 2025
+
 // This class defines a Comparator  - that is a class that implements the
 // Comparator interface.  Every class that implements the Comparator interface
 // must implement the compare() method.
@@ -20,23 +20,15 @@ package dkit.oop;
 
 import java.util.Comparator;
 
-public class CarMileageComparator implements Comparator<Car>
+public class CarMileageAscendingComparator implements Comparator<Car>
 {
 	public int compare(Car car1, Car car2)
 	{
+		// note we reverse the order of the arguments to get a DESCENDING order
 		return Double.compare(car1.getMileage(),car2.getMileage());
 	}
 }
-		// The above is logically similar to the following:
-		// (However the above is recommended as there may be
-		// problems in some cases dur to rounding.
-//		if ( car1.getMileage() < car2.getMileage() ) {
-//			return -1; // or any negative value
-//		} else if ( car1.getMileage() == car2.getMileage()) {
-//			return 0;
-//		} else {
-//			return 1; // or any positive value
-//		}
+
 
 
 
