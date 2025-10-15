@@ -4,12 +4,13 @@ package dkit.oop;					// Oct 2025
 
 // Demonstrates how to determine the sort order of a collection of objects
 // by providing an appropriate Comparator.
-// A Comparator is a class implements the Comparable Interface and
-// that defines a compare() method to compare to objects.
+// A Comparator is a class that implements the Comparable Interface and
+// that defines a compare() method to compare two objects.
 //
 // The Comparator passed into Collections.sort(list, comparator)
 // will be used by the sort() method to compare objects and thus
-// determine the sort order.
+// determine the ordering.
+// list.sort(comparator) is now the preferred method.
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -44,46 +45,40 @@ public class AppMain
 		 */
 
 		System.out.println("Sort by year:");
-		// create instance of CarYearComparator object to specify ordering for sort by 'year'
-		CarYearAscendingComparator yearComparator = new CarYearAscendingComparator();
-		Collections.sort( carList, yearComparator );
+		// create an instance of CarYearAscendingComparator to specify ordering for sort by 'year'
+		CarYearAscendingComparator yearAscComparator = new CarYearAscendingComparator();
+		Collections.sort( carList, yearAscComparator );
 
-		// or carList.sort( yearComparator );  // uses List.sort()
-
-		//or Collections.sort( carList,  new CarYearComparator());
+		//carList.sort( yearAscComparator );  // alternatively, use List.sort()
 
 		display( carList );
 
 		System.out.println("Sort by mileage:");
-		// create a CarMileageComparator object to sort by 'mileage'
-		CarMileageAscendingComparator mileageComparator = new CarMileageAscendingComparator();
-		Collections.sort( carList, mileageComparator );
+		// create a CarMileageAscendingComparator object to sort by 'mileage'
+		carList.sort( new CarMileageAscendingComparator() );
 		display( carList );
 
 		System.out.println("Sort by mileage DESCENDING:");
 		// create a CarMileageDescendingComparator object to sort by 'mileage'
-		Collections.sort( carList, new CarMilageDescendingComparator() );
+		carList.sort( new CarMilageDescendingComparator() );
 		display( carList );
-
-
 
 		System.out.println("Sort by make:");
 		// create a CarMakeComparator object to sort by 'make'
-		CarMakeAscendingComparator makeComparator = new CarMakeAscendingComparator();
-		Collections.sort( carList, makeComparator );
+		carList.sort( new CarMakeAscendingComparator() );
 		display( carList );
 
 		// Note that the order of the elements in the ArrayList
 		// will be changed every time a sort() is applied.
 
-		// TODO
-		// Write and test a comparator to sort the carList list in order of "model"
+		//TODO
+		// Write a comparator and use it to sort the carList in DESCENDING order of "model".
+		// Output the result and confirm that it has worked
 
-
-		// TODO
-		// write and test a Comparator to sort the carList list in order
-		// of "year within make" - meaning that "make" is the major sort order, and
-		// "year" is the minor sort order.
+		//TODO
+		// Write a Comparator to sort the carList list in order of "mileage within model" -
+		// meaning that "model" is the primary sort order, and "mileage" is the secondary sort order.
+		// Check your output.
 
 	}
 

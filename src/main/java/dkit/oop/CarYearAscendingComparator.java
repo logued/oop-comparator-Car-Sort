@@ -32,12 +32,10 @@ public class CarYearAscendingComparator implements Comparator<Car>
 			return 1;
 		}
 
+		// return Integer.compare(car1.getYear(),car2.getYear());  // better
+
 		// Note that we must use getYear() above, as the year field
 		// is private to the Car class.
-
-//		As an alternative to the above, we could subtract one from
-//		the other and return the difference.
-//		return (car1.getYear() - car2.getYear());
 
 	}
 }

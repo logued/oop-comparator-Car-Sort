@@ -1,10 +1,10 @@
-// Comparator - compares String-type field "make"		Nov 2021
+// Comparator - compares String-type field "make"		Nov 2025
 //
 // This class defines a Comparator  - that is a class that implements the
 // Comparator interface.  Every class that implements the Comparator interface
-// must implement the compare() method.
+// must implement the compare(obj1,obj2) method.
 //
-// In this case we want to compare Car objects based on their "make".
+// In this case we want to compare Car objects based on their "make" ascending.
 // So, in the compare() method, we compare the make fields of the
 // two Car objects.
 //

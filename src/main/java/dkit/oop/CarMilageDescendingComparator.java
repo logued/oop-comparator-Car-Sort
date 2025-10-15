@@ -1,4 +1,4 @@
-// Comparator - compares double-type field "mileage"		Nov 2025
+// Comparator - compares double-type field "mileage"		Oct 2025
 // DESCENDING Order
 
 // This class defines a Comparator  - that is a class that implements the
